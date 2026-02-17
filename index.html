@@ -106,6 +106,8 @@
             transform: rotateY(180deg);
             padding: 30px;
             overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
             display: flex;
             flex-direction: column;
         }
@@ -116,12 +118,15 @@
             color: #333;
             margin-bottom: 20px;
             text-align: center;
+            flex-shrink: 0;
         }
 
         .ingredients-list {
             list-style: none;
             padding: 0;
             margin: 0;
+            flex: 1;
+            min-height: 0;
         }
 
         .ingredients-list li {
@@ -1474,6 +1479,15 @@
 
         function handleStart(e) {
             if (e.type === 'mousedown' && e.button !== 0) return;
+            
+            // If card is flipped and user is touching the back, allow scrolling
+            if (currentCard.classList.contains('flipped')) {
+                const target = e.target;
+                if (target.closest('.card-back')) {
+                    // Allow default scroll behavior on back of card
+                    return;
+                }
+            }
             
             isDragging = true;
             hasMoved = false;
