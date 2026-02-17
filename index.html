@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Swiper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .card-stack {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            margin: 0 auto;
+        }
+
+        .recipe-card {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+            cursor: grab;
+            user-select: none;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .recipe-card.dragging {
+            cursor: grabbing;
+            transition: none;
+        }
+
+        .recipe-card.swiped-left {
+            transform: translateX(-150%) rotate(-30deg);
+            opacity: 0;
+        }
+
+        .recipe-card.swiped-right {
+            transform: translateX(150%) rotate(30deg);
+            opacity: 0;
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .recipe-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .recipe-name {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .recipe-category {
+            font-size: 1rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .swipe-indicator {
+            position: absolute;
+            top: 30px;
+            font-size: 4rem;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            pointer-events: none;
+        }
+
+        .swipe-indicator.like {
+            right: 30px;
+            color: #4ade80;
+        }
+
+        .swipe-indicator.nope {
+            left: 30px;
+            color: #f87171;
+        }
+
+        .recipe-card.swiping-right .swipe-indicator.like {
+            opacity: 1;
+        }
+
+        .recipe-card.swiping-left .swipe-indicator.nope {
+            opacity: 1;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .button {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+
+        .button.nope {
+            background: #f87171;
+            color: white;
+        }
+
+        .button.like {
+            background: #4ade80;
+            color: white;
+        }
+
+        .results {
+            display: none;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .results h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .selected-recipe {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .selected-recipe img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .selected-recipe-info h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .selected-recipe-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .restart-button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .restart-button:hover {
+            transform: scale(1.02);
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #666;
+            padding: 40px;
+            font-size: 1.1rem;
+        }
+
+        .counter {
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            margin-top: 15px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍽️ Recipe Swiper</h1>
+        
+        <div class="card-stack" id="cardStack"></div>
+        
+        <div class="buttons" id="buttons">
+            <button class="button nope" onclick="swipe('left')" title="Nope">✕</button>
+            <button class="button like" onclick="swipe('right')" title="Like">♥</button>
+        </div>
+
+        <div class="counter" id="counter"></div>
+    </div>
+
+    <div class="results" id="results">
+        <h2>✨ Your Selected Recipes</h2>
+        <div id="selectedList"></div>
+        <button class="restart-button" onclick="restart()">Start Over</button>
+    </div>
+
+    <script>
+        // Sample recipes - you can expand this list or fetch from an API
+        const recipes = [
+            {
+                name: "Chickpea Cucumber Salad",
+                category: "Salad",
+                image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80"
+            },
+            {
+                name: "Protein Banana Bread",
+                category: "Breakfast",
+                image: "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800&q=80"
+            },
+            {
+                name: "Greek Yogurt Coleslaw",
+                category: "Side",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80"
+            },
+            {
+                name: "Mushroom Orzo",
+                category: "Main",
+                image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&q=80"
+            },
+            {
+                name: "Lentil Soup",
+                category: "Soup",
+                image: "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80"
+            },
+            {
+                name: "Tofu Stir Fry",
+                category: "Main",
+                image: "https://images.unsplash.com/photo-1546833998-877b37c2e5c6?w=800&q=80"
+            },
+            {
+                name: "Vegan Pasta Carbonara",
+                category: "Pasta",
+                image: "https://images.unsplash.com/photo-1621996346547-45a2d7969e3d?w=800&q=80"
+            },
+            {
+                name: "Buddha Bowl",
+                category: "Bowl",
+                image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80"
+            },
+            {
+                name: "Chocolate Avocado Mousse",
+                category: "Dessert",
+                image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80"
+            },
+            {
+                name: "Quinoa Black Bean Burgers",
+                category: "Main",
+                image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80"
+            }
+        ];
+
+        let currentIndex = 0;
+        let selectedRecipes = [];
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+        let currentCard = null;
+
+        function init() {
+            renderCard();
+            updateCounter();
+        }
+
+        function renderCard() {
+            const cardStack = document.getElementById('cardStack');
+            cardStack.innerHTML = '';
+
+            if (currentIndex >= recipes.length) {
+                showResults();
+                return;
+            }
+
+            const recipe = recipes[currentIndex];
+            const card = document.createElement('div');
+            card.className = 'recipe-card';
+            card.innerHTML = `
+                <div class="swipe-indicator nope">NOPE</div>
+                <div class="swipe-indicator like">LIKE</div>
+                <img src="${recipe.image}" alt="${recipe.name}" class="recipe-image" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80'">
+                <div class="recipe-info">
+                    <div class="recipe-name">${recipe.name}</div>
+                    <div class="recipe-category">${recipe.category}</div>
+                </div>
+            `;
+
+            // Touch events
+            card.addEventListener('touchstart', handleStart);
+            card.addEventListener('touchmove', handleMove);
+            card.addEventListener('touchend', handleEnd);
+
+            // Mouse events
+            card.addEventListener('mousedown', handleStart);
+            document.addEventListener('mousemove', handleMove);
+            document.addEventListener('mouseup', handleEnd);
+
+            cardStack.appendChild(card);
+            currentCard = card;
+        }
+
+        function handleStart(e) {
+            if (e.type === 'mousedown' && e.button !== 0) return;
+            
+            isDragging = true;
+            startX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+            currentCard.classList.add('dragging');
+            e.preventDefault();
+        }
+
+        function handleMove(e) {
+            if (!isDragging) return;
+            
+            currentX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+            const diff = currentX - startX;
+            const rotation = diff / 20;
+
+            currentCard.style.transform = `translateX(${diff}px) rotate(${rotation}deg)`;
+
+            if (diff > 50) {
+                currentCard.classList.add('swiping-right');
+                currentCard.classList.remove('swiping-left');
+            } else if (diff < -50) {
+                currentCard.classList.add('swiping-left');
+                currentCard.classList.remove('swiping-right');
+            } else {
+                currentCard.classList.remove('swiping-right', 'swiping-left');
+            }
+        }
+
+        function handleEnd(e) {
+            if (!isDragging) return;
+            
+            isDragging = false;
+            currentCard.classList.remove('dragging');
+
+            const diff = currentX - startX;
+            const threshold = 100;
+
+            if (diff > threshold) {
+                finishSwipe('right');
+            } else if (diff < -threshold) {
+                finishSwipe('left');
+            } else {
+                currentCard.style.transform = '';
+                currentCard.classList.remove('swiping-right', 'swiping-left');
+            }
+        }
+
+        function swipe(direction) {
+            if (!currentCard) return;
+            finishSwipe(direction);
+        }
+
+        function finishSwipe(direction) {
+            currentCard.classList.add(`swiped-${direction}`);
+            
+            if (direction === 'right') {
+                selectedRecipes.push(recipes[currentIndex]);
+            }
+
+            setTimeout(() => {
+                currentIndex++;
+                renderCard();
+                updateCounter();
+            }, 300);
+        }
+
+        function updateCounter() {
+            const counter = document.getElementById('counter');
+            const remaining = recipes.length - currentIndex;
+            counter.textContent = `${remaining} recipes remaining`;
+        }
+
+        function showResults() {
+            document.getElementById('cardStack').style.display = 'none';
+            document.getElementById('buttons').style.display = 'none';
+            document.getElementById('counter').style.display = 'none';
+            document.querySelector('.container h1').textContent = '✅ Done!';
+            
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.classList.add('show');
+
+            const selectedList = document.getElementById('selectedList');
+            
+            if (selectedRecipes.length === 0) {
+                selectedList.innerHTML = '<div class="empty-state">You didn\'t select any recipes. Try again!</div>';
+            } else {
+                selectedList.innerHTML = selectedRecipes.map(recipe => `
+                    <div class="selected-recipe">
+                        <img src="${recipe.image}" alt="${recipe.name}">
+                        <div class="selected-recipe-info">
+                            <h3>${recipe.name}</h3>
+                            <p>${recipe.category}</p>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function restart() {
+            currentIndex = 0;
+            selectedRecipes = [];
+            
+            document.getElementById('cardStack').style.display = '';
+            document.getElementById('buttons').style.display = '';
+            document.getElementById('counter').style.display = '';
+            document.querySelector('.container h1').textContent = '🍽️ Recipe Swiper';
+            document.getElementById('results').classList.remove('show');
+            
+            init();
+        }
+
+        // Initialize on load
+        init();
+    </script>
+</body>
+</html>
