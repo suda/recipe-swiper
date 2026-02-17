@@ -68,42 +68,47 @@ def extract_recipes_from_html(html_content):
     recipes = []
     
     # Find all article elements that contain recipes
-    article_pattern = r'<article[^>]*class="[^"]*post[^"]*"[^>]*>(.*?)</article>'
+    article_pattern = r'<article[^>]*class="[^"]*post-summary[^"]*"[^>]*>(.*?)</article>'
     articles = re.findall(article_pattern, html_content, re.DOTALL | re.IGNORECASE)
     
     for article in articles:
         recipe = {}
         
-        # Extract title from h2 or h3 with entry-title class
-        title_match = re.search(r'<h[23][^>]*class="[^"]*entry-title[^"]*"[^>]*>.*?<a[^>]*>(.*?)</a>', article, re.DOTALL)
-        if not title_match:
-            title_match = re.search(r'<h[23][^>]*>.*?<a[^>]*>(.*?)</a>', article, re.DOTALL)
+        # Extract category from entry-category paragraph
+        category_match = re.search(r'<p[^>]*class="[^"]*entry-category[^"]*"[^>]*>(.*?)</p>', article, re.DOTALL)
+        if category_match:
+            category = re.sub(r'<[^>]+>', '', category_match.group(1)).strip()
+            # Clean up HTML entities
+            category = category.replace('&amp;', '&')
+            recipe['category'] = category
+        else:
+            recipe['category'] = 'Recipe'
+        
+        # Extract title from h3 with post-summary__title class
+        title_match = re.search(r'<h3[^>]*class="[^"]*post-summary__title[^"]*"[^>]*>.*?<a[^>]*>(.*?)</a>', article, re.DOTALL)
         
         if title_match:
             title = re.sub(r'<[^>]+>', '', title_match.group(1)).strip()
+            # Clean up HTML entities
+            title = title.replace('&amp;', '&').replace('&#8217;', "'")
             recipe['name'] = title
         
-        # Extract image URL
-        img_patterns = [
-            r'<img[^>]*data-src="([^"]+)"',
-            r'<img[^>]*src="([^"]+)"',
-            r'<img[^>]*data-lazy-src="([^"]+)"',
-        ]
+        # Extract image URL - look for data-lazy-srcset first (better quality)
+        img_match = re.search(r'data-lazy-srcset="([^"]+)"', article)
+        if img_match:
+            # Get the 600x600 image from srcset
+            srcset = img_match.group(1)
+            img_600_match = re.search(r'(https://[^\s]+600x600\.jpg)', srcset)
+            if img_600_match:
+                recipe['image'] = img_600_match.group(1)
         
-        for pattern in img_patterns:
-            img_match = re.search(pattern, article)
+        # Fallback to data-lazy-src
+        if 'image' not in recipe:
+            img_match = re.search(r'data-lazy-src="([^"]+)"', article)
             if img_match:
                 img_url = img_match.group(1)
-                if 'placeholder' not in img_url.lower() and img_url.startswith('http'):
+                if img_url.startswith('http'):
                     recipe['image'] = img_url
-                    break
-        
-        # Extract category (if available)
-        category_match = re.search(r'<a[^>]*rel="category tag"[^>]*>(.*?)</a>', article)
-        if category_match:
-            recipe['category'] = re.sub(r'<[^>]+>', '', category_match.group(1)).strip()
-        else:
-            recipe['category'] = 'Recipe'
         
         # Only add if we have both name and image
         if 'name' in recipe and 'image' in recipe:
