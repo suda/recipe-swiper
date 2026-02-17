@@ -270,20 +270,92 @@
             margin-top: 8px;
             opacity: 0.9;
         }
+
+        .category-selection {
+            display: none;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .category-selection.show {
+            display: block;
+        }
+
+        .category-selection h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 12px;
+        }
+
+        .category-button {
+            padding: 20px 15px;
+            background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+            border: 2px solid #e5e7eb;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .category-button:hover {
+            transform: scale(1.05);
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .category-emoji {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .category-name {
+            display: block;
+            font-size: 0.85rem;
+        }
+
+        .category-count {
+            display: block;
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🍽️ Recipe Swiper</h1>
         
+        <div class="category-selection" id="categorySelection">
+            <h2>Choose a Category</h2>
+            <div class="category-grid" id="categoryGrid"></div>
+        </div>
+
         <div class="card-stack" id="cardStack"></div>
         
-        <div class="buttons" id="buttons">
+        <div class="buttons" id="buttons" style="display: none;">
             <button class="button nope" onclick="swipe('left')" title="Nope">✕</button>
             <button class="button like" onclick="swipe('right')" title="Like">♥</button>
         </div>
 
-        <button class="finish-button" id="finishButton" onclick="showResults()">✓ Finish Early</button>
+        <button class="finish-button" id="finishButton" onclick="showResults()" style="display: none;">✓ Finish Early</button>
 
         <div class="counter" id="counter"></div>
     </div>
@@ -525,6 +597,85 @@
         let currentX = 0;
         let isDragging = false;
         let currentCard = null;
+        let filteredRecipes = [];
+        let selectedCategory = null;
+
+        // Category emojis
+        const categoryEmojis = {
+            'Greek': '🇬🇷',
+            'Breakfast': '🌅',
+            'Soups': '🍲',
+            '30-minute meals': '⚡',
+            'Salads': '🥗',
+            'Sheet Pan': '🍳',
+            'One-pot Meals': '🍯',
+            'Curry Recipes': '🍛',
+            'Bread Recipes': '🍞',
+            'Sides': '🥘',
+            'Dips and Spreads': '🫙',
+            'Sauces and Dressings': '🧂',
+            'Pasta': '🍝',
+            'Tofu Recipes': '🧊',
+            'Desserts': '🍰',
+            'Starters': '🥙'
+        };
+
+        // Shuffle array
+        function shuffle(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        // Get unique categories with counts
+        function getCategories() {
+            const categoryMap = {};
+            recipes.forEach(recipe => {
+                const cat = recipe.category;
+                categoryMap[cat] = (categoryMap[cat] || 0) + 1;
+            });
+            return Object.entries(categoryMap).map(([name, count]) => ({ name, count }));
+        }
+
+        // Show category selection
+        function showCategorySelection() {
+            const categories = getCategories();
+            const grid = document.getElementById('categoryGrid');
+            grid.innerHTML = '';
+
+            categories.forEach(({ name, count }) => {
+                const button = document.createElement('button');
+                button.className = 'category-button';
+                button.onclick = () => selectCategory(name);
+                
+                const emoji = categoryEmojis[name] || '🍴';
+                button.innerHTML = `
+                    <span class="category-emoji">${emoji}</span>
+                    <span class="category-name">${name}</span>
+                    <span class="category-count">${count} recipe${count !== 1 ? 's' : ''}</span>
+                `;
+                
+                grid.appendChild(button);
+            });
+
+            document.getElementById('categorySelection').classList.add('show');
+        }
+
+        // Select category and start swiping
+        function selectCategory(category) {
+            selectedCategory = category;
+            filteredRecipes = shuffle(recipes.filter(r => r.category === category));
+            currentIndex = 0;
+            
+            document.getElementById('categorySelection').classList.remove('show');
+            document.getElementById('buttons').style.display = 'flex';
+            document.getElementById('finishButton').style.display = 'block';
+            
+            init();
+        }
 
         function init() {
             renderCard();
@@ -535,12 +686,12 @@
             const cardStack = document.getElementById('cardStack');
             cardStack.innerHTML = '';
 
-            if (currentIndex >= recipes.length) {
+            if (currentIndex >= filteredRecipes.length) {
                 showResults();
                 return;
             }
 
-            const recipe = recipes[currentIndex];
+            const recipe = filteredRecipes[currentIndex];
             const card = document.createElement('div');
             card.className = 'recipe-card';
             card.innerHTML = `
@@ -635,7 +786,7 @@
 
         function updateCounter() {
             const counter = document.getElementById('counter');
-            const remaining = recipes.length - currentIndex;
+            const remaining = filteredRecipes.length - currentIndex;
             counter.textContent = `${remaining} remaining`;
         }
 
@@ -668,19 +819,21 @@
         function restart() {
             currentIndex = 0;
             selectedRecipes = [];
+            filteredRecipes = [];
+            selectedCategory = null;
             
             document.getElementById('cardStack').style.display = '';
-            document.getElementById('buttons').style.display = '';
-            document.getElementById('finishButton').style.display = '';
+            document.getElementById('buttons').style.display = 'none';
+            document.getElementById('finishButton').style.display = 'none';
             document.getElementById('counter').style.display = '';
             document.querySelector('.container h1').textContent = '🍽️ Recipe Swiper';
             document.getElementById('results').classList.remove('show');
             
-            init();
+            showCategorySelection();
         }
 
         // Initialize on load
-        init();
+        showCategorySelection();
     </script>
 </body>
 </html>
