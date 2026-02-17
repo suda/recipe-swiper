@@ -38,7 +38,7 @@
         .card-stack {
             position: relative;
             width: 100%;
-            height: 600px;
+            height: 500px;
             margin: 0 auto;
         }
 
@@ -163,6 +163,26 @@
             color: white;
         }
 
+        .finish-button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .finish-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
         .results {
             display: none;
             background: white;
@@ -256,6 +276,8 @@
             <button class="button nope" onclick="swipe('left')" title="Nope">✕</button>
             <button class="button like" onclick="swipe('right')" title="Like">♥</button>
         </div>
+
+        <button class="finish-button" id="finishButton" onclick="showResults()">✓ Finish Early</button>
 
         <div class="counter" id="counter"></div>
     </div>
@@ -609,12 +631,13 @@
         function updateCounter() {
             const counter = document.getElementById('counter');
             const remaining = recipes.length - currentIndex;
-            counter.textContent = `${remaining} recipes remaining`;
+            counter.textContent = `${remaining} remaining`;
         }
 
         function showResults() {
             document.getElementById('cardStack').style.display = 'none';
             document.getElementById('buttons').style.display = 'none';
+            document.getElementById('finishButton').style.display = 'none';
             document.getElementById('counter').style.display = 'none';
             document.querySelector('.container h1').textContent = '✅ Done!';
             
@@ -644,6 +667,7 @@
             
             document.getElementById('cardStack').style.display = '';
             document.getElementById('buttons').style.display = '';
+            document.getElementById('finishButton').style.display = '';
             document.getElementById('counter').style.display = '';
             document.querySelector('.container h1').textContent = '🍽️ Recipe Swiper';
             document.getElementById('results').classList.remove('show');
