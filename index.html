@@ -1332,9 +1332,12 @@
         let currentIndex = 0;
         let selectedRecipes = [];
         let startX = 0;
+        let startY = 0;
         let currentX = 0;
+        let currentY = 0;
         let isDragging = false;
         let hasMoved = false;
+        let isVerticalScroll = false;
         let currentCard = null;
         let filteredRecipes = [];
         let selectedCategory = null;
@@ -1480,55 +1483,80 @@
         function handleStart(e) {
             if (e.type === 'mousedown' && e.button !== 0) return;
             
-            // If card is flipped and user is touching the back, allow scrolling
-            if (currentCard.classList.contains('flipped')) {
-                const target = e.target;
-                if (target.closest('.card-back')) {
-                    // Allow default scroll behavior on back of card
-                    return;
-                }
-            }
-            
             isDragging = true;
             hasMoved = false;
-            startX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+            isVerticalScroll = false;
+            
+            if (e.type.includes('mouse')) {
+                startX = e.clientX;
+                startY = e.clientY;
+            } else {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+            }
+            
             currentCard.classList.add('dragging');
-            e.preventDefault();
+            // Don't prevent default yet - wait to see if it's a scroll
         }
 
         function handleMove(e) {
             if (!isDragging) return;
             
-            currentX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
-            const diff = currentX - startX;
-            
-            // If moved more than 30px, it's a drag not a tap
-            if (Math.abs(diff) > 30) {
-                hasMoved = true;
+            if (e.type.includes('mouse')) {
+                currentX = e.clientX;
+                currentY = e.clientY;
+            } else {
+                currentX = e.touches[0].clientX;
+                currentY = e.touches[0].clientY;
             }
             
-            const rotation = diff / 20;
+            const diffX = currentX - startX;
+            const diffY = currentY - startY;
+            const absX = Math.abs(diffX);
+            const absY = Math.abs(diffY);
+            
+            // If card is flipped and user is scrolling vertically on the back, allow it
+            if (!hasMoved && currentCard.classList.contains('flipped')) {
+                const target = e.target || e.touches[0].target;
+                if (target.closest('.card-back') && absY > absX && absY > 10) {
+                    isVerticalScroll = true;
+                    isDragging = false;
+                    currentCard.classList.remove('dragging');
+                    return;
+                }
+            }
+            
+            // Detect horizontal movement for swiping
+            if (absX > 30 || absY > 30) {
+                hasMoved = true;
+                e.preventDefault(); // Now we know it's a drag, prevent scroll
+            }
+            
+            // Only do swipe animation if horizontal movement dominates
+            if (!isVerticalScroll && absX > absY) {
+                const rotation = diffX / 20;
+                currentCard.style.transform = `translateX(${diffX}px) rotate(${rotation}deg)`;
 
-            currentCard.style.transform = `translateX(${diff}px) rotate(${rotation}deg)`;
-
-            if (diff > 50) {
-                currentCard.classList.add('swiping-right');
-                currentCard.classList.remove('swiping-left');
-            } else if (diff < -50) {
-                currentCard.classList.add('swiping-left');
-                currentCard.classList.remove('swiping-right');
-            } else {
-                currentCard.classList.remove('swiping-right', 'swiping-left');
+                if (diffX > 50) {
+                    currentCard.classList.add('swiping-right');
+                    currentCard.classList.remove('swiping-left');
+                } else if (diffX < -50) {
+                    currentCard.classList.add('swiping-left');
+                    currentCard.classList.remove('swiping-right');
+                } else {
+                    currentCard.classList.remove('swiping-right', 'swiping-left');
+                }
             }
         }
 
         function handleEnd(e) {
-            if (!isDragging) return;
+            if (!isDragging && !isVerticalScroll) return;
             
             isDragging = false;
+            isVerticalScroll = false;
             currentCard.classList.remove('dragging');
 
-            const diff = currentX - startX;
+            const diffX = currentX - startX;
             const swipeThreshold = 120;
 
             // If didn't move much, it's a tap - flip the card
@@ -1539,10 +1567,10 @@
                 return;
             }
 
-            // Otherwise handle swipe (only if moved far enough)
-            if (diff > swipeThreshold) {
+            // Otherwise handle swipe (only if moved far enough horizontally)
+            if (diffX > swipeThreshold) {
                 finishSwipe('right');
-            } else if (diff < -swipeThreshold) {
+            } else if (diffX < -swipeThreshold) {
                 finishSwipe('left');
             } else {
                 // Not enough movement - just return to center
