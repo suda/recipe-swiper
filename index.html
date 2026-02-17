@@ -1488,8 +1488,8 @@
             currentX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
             const diff = currentX - startX;
             
-            // If moved more than 10px, it's a drag not a tap
-            if (Math.abs(diff) > 10) {
+            // If moved more than 30px, it's a drag not a tap
+            if (Math.abs(diff) > 30) {
                 hasMoved = true;
             }
             
@@ -1515,21 +1515,23 @@
             currentCard.classList.remove('dragging');
 
             const diff = currentX - startX;
-            const threshold = 100;
+            const swipeThreshold = 120;
 
             // If didn't move much, it's a tap - flip the card
-            if (!hasMoved && Math.abs(diff) < 10) {
+            if (!hasMoved) {
                 currentCard.classList.toggle('flipped');
                 currentCard.style.transform = '';
+                currentCard.classList.remove('swiping-right', 'swiping-left');
                 return;
             }
 
-            // Otherwise handle swipe
-            if (diff > threshold) {
+            // Otherwise handle swipe (only if moved far enough)
+            if (diff > swipeThreshold) {
                 finishSwipe('right');
-            } else if (diff < -threshold) {
+            } else if (diff < -swipeThreshold) {
                 finishSwipe('left');
             } else {
+                // Not enough movement - just return to center
                 currentCard.style.transform = '';
                 currentCard.classList.remove('swiping-right', 'swiping-left');
             }
