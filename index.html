@@ -1476,10 +1476,11 @@
 
             // Mouse events only on front
             cardFront.addEventListener('mousedown', handleStart);
-            
-            // Tap to flip - on both sides
             cardFront.addEventListener('click', handleFlip);
+            
+            // Tap to flip back (click only, touch handled in handleEnd)
             cardBack.addEventListener('click', handleFlip);
+            cardBack.addEventListener('touchend', handleBackTap);
         }
         
         function handleFlip(e) {
@@ -1487,6 +1488,11 @@
             if (!hasMoved) {
                 currentCard.classList.toggle('flipped');
             }
+        }
+        
+        function handleBackTap(e) {
+            // Simple tap on back to flip
+            currentCard.classList.toggle('flipped');
         }
 
         function handleStart(e) {
@@ -1545,10 +1551,18 @@
             const diff = currentX - startX;
             const swipeThreshold = 120;
 
+            // If didn't move (tap), flip the card
+            if (!hasMoved) {
+                currentCard.classList.toggle('flipped');
+                currentCard.style.transform = '';
+                currentCard.classList.remove('swiping-right', 'swiping-left');
+                return;
+            }
+
             // Handle swipe (only if moved far enough)
-            if (hasMoved && diff > swipeThreshold) {
+            if (diff > swipeThreshold) {
                 finishSwipe('right');
-            } else if (hasMoved && diff < -swipeThreshold) {
+            } else if (diff < -swipeThreshold) {
                 finishSwipe('left');
             } else {
                 // Not enough movement - return to center
