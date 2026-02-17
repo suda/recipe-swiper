@@ -666,6 +666,7 @@
             });
 
             document.getElementById('categorySelection').classList.add('show');
+            document.getElementById('cardStack').style.display = 'none';
             document.querySelector('.container').classList.remove('centered');
         }
 
@@ -676,6 +677,7 @@
             currentIndex = 0;
             
             document.getElementById('categorySelection').classList.remove('show');
+            document.getElementById('cardStack').style.display = '';
             document.querySelector('.container').classList.add('centered');
             document.getElementById('buttons').style.display = 'flex';
             document.getElementById('finishButton').style.display = 'block';
@@ -829,7 +831,7 @@
             filteredRecipes = [];
             selectedCategory = null;
             
-            document.getElementById('cardStack').style.display = '';
+            document.getElementById('cardStack').innerHTML = '';
             document.getElementById('buttons').style.display = 'none';
             document.getElementById('finishButton').style.display = 'none';
             document.getElementById('counter').style.display = '';
