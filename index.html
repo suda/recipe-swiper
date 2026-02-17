@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Recipe Swiper</title>
     <style>
         * {
@@ -15,10 +15,12 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             height: 100vh;
+            height: 100dvh; /* Dynamic viewport height for mobile */
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 10px;
+            padding-bottom: max(10px, env(safe-area-inset-bottom));
             overflow: hidden;
         }
 
@@ -28,6 +30,7 @@
             flex: 1;
             display: flex;
             flex-direction: column;
+            min-height: 0; /* Allow flex item to shrink */
         }
 
         .container.centered {
@@ -352,17 +355,25 @@
             display: none;
             background: white;
             border-radius: 20px;
-            padding: 30px;
+            padding: 20px;
             box-shadow: 0 10px 50px rgba(0,0,0,0.3);
             max-width: 600px;
             width: 100%;
             flex: 1;
+            min-height: 0; /* Allow flex item to shrink */
             overflow-y: auto;
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
             flex-direction: column;
         }
 
         .category-selection.show {
             display: flex;
+        }
+        
+        @media (min-width: 600px) {
+            .category-selection {
+                padding: 30px;
+            }
         }
 
         .category-selection h2 {
