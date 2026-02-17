@@ -15,6 +15,12 @@ Now featuring **44 real recipes** from [The Plant Based School](https://theplant
 
 ## How to Use
 
+### Live Demo
+
+Visit the deployed app at: **[Your GitHub Pages URL]** (after pushing to GitHub)
+
+### Local Development
+
 1. **Open the file:**
 
    **Option A: Quick preview server**
@@ -133,13 +139,34 @@ Change `#667eea` and `#764ba2` to your preferred colors.
 
 ```
 recipe-swiper/
-├── index.html           # Complete app (HTML + CSS + JS)
-├── scrape_recipes.py    # Recipe scraper for The Plant Based School
-├── recipes.json         # Extracted recipes in JSON format
-├── recipes.js           # Extracted recipes as JavaScript array
-├── serve.sh            # Quick preview server script
-└── README.md           # This file
+├── .github/
+│   └── workflows/
+│       └── deploy.yml      # GitHub Pages deployment workflow
+├── index.html              # Complete app (HTML + CSS + JS)
+├── scrape_recipes.py       # Recipe scraper for The Plant Based School
+├── recipes.json            # Extracted recipes in JSON format
+├── recipes.js              # Extracted recipes as JavaScript array
+├── serve.sh               # Quick preview server script
+├── DEPLOYMENT.md          # GitHub Pages setup guide
+└── README.md              # This file
 ```
+
+## Deployment
+
+This project is configured for automatic deployment to GitHub Pages:
+
+1. **Push to GitHub:**
+   ```bash
+   git remote add origin git@github.com:USERNAME/recipe-swiper.git
+   git push -u origin master
+   ```
+
+2. **Enable GitHub Pages:**
+   - Go to repository **Settings** → **Pages**
+   - Set source to **GitHub Actions**
+   - Your app will be live at `https://USERNAME.github.io/recipe-swiper/`
+
+See `DEPLOYMENT.md` for detailed instructions.
 
 ## Ideas for Enhancement
 
