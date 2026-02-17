@@ -29,6 +29,9 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+        }
+
+        .container.centered {
             justify-content: center;
         }
 
@@ -664,6 +667,7 @@
             });
 
             document.getElementById('categorySelection').classList.add('show');
+            document.querySelector('.container').classList.remove('centered');
         }
 
         // Select category and start swiping
@@ -673,6 +677,7 @@
             currentIndex = 0;
             
             document.getElementById('categorySelection').classList.remove('show');
+            document.querySelector('.container').classList.add('centered');
             document.getElementById('buttons').style.display = 'flex';
             document.getElementById('finishButton').style.display = 'block';
             
@@ -798,6 +803,7 @@
             document.getElementById('finishButton').style.display = 'none';
             document.getElementById('counter').style.display = 'none';
             document.querySelector('.container h1').textContent = '✅ Done!';
+            document.querySelector('.container').classList.remove('centered');
             
             const resultsDiv = document.getElementById('results');
             resultsDiv.classList.add('show');
