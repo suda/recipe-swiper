@@ -17,7 +17,7 @@ Now featuring **44 real recipes** from [The Plant Based School](https://theplant
 
 ### Live Demo
 
-Visit the deployed app at: **[Your GitHub Pages URL]** (after pushing to GitHub)
+Visit the deployed app at: **https://suda.github.io/recipe-swiper/**
 
 ### Local Development
 
