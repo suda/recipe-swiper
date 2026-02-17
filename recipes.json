@@ -2,221 +2,862 @@
   {
     "category": "Greek",
     "name": "Creamy Spinach Orzo with Chickpeas and Feta (Greek-Inspired)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Bowl-filled-with-spinach-orzo-lemon-zest-and-scattered-feta-600x600.jpg"
+    "url": "https://theplantbasedschool.com/spinach-orzo/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Bowl-filled-with-spinach-orzo-lemon-zest-and-scattered-feta-600x600.jpg",
+    "ingredients": [
+      "2 tablespoons olive oil extra virgin",
+      "1 onion chopped",
+      "2 cloves garlic grated",
+      "1 cup dry orzo",
+      "1 can chickpeas 15 oz / 400 g can or 1\u00bd cups / 230 g cooked chickpeas",
+      "3 cups vegetable broth plus extra hot water or broth if needed",
+      "8 ounces spinach",
+      "\u00bd lemon zest and juice",
+      "2 tablespoons fresh dill chopped, or parsley if preferred",
+      "\u00bd cup feta cheese crumbled",
+      "\u00bd teaspoon salt plus more to taste",
+      "\u00bc teaspoon black pepper freshly ground"
+    ]
   },
   {
     "category": "Sheet Pan",
     "name": "Black Bean and Rice Bowl with Cilantro Lime Yogurt Sauce",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Black-Bean-and-Rice-Bowl-with-Greek-Yogurt-Cilantro-Lime-Dressing-topped-with-avocado-and-feta-600x600.jpg"
+    "url": "https://theplantbasedschool.com/black-bean-and-rice-bowl/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Black-Bean-and-Rice-Bowl-with-Greek-Yogurt-Cilantro-Lime-Dressing-topped-with-avocado-and-feta-600x600.jpg",
+    "ingredients": [
+      "1\u00bd cups cooked rice white or brown &#8211; or \u00bd heaping cup uncooked rice",
+      "1 can black beans 15 oz / 400 g can or 1\u00bd cup / 230 g cooked beans &#8211; rinsed",
+      "1 pound sweet potatoes peeled and diced",
+      "1 bell pepper any color, chopped",
+      "1 onion sliced",
+      "\u00bd cup corn canned or thawed from frozen",
+      "\u00bc cup pickled jalape\u00f1os add less or more to taste &#8211; sliced",
+      "1 teaspoon smoked paprika",
+      "1 teaspoon cumin",
+      "1 teaspoon salt and black pepper to taste",
+      "1 cup Greek yogurt",
+      "\u00bd cup fresh cilantro use parsley if preferred",
+      "2 tablespoons lime juice",
+      "1 tablespoon maple syrup optional &#8211; or honey",
+      "1 tablespoon olive oil + more to roast the veggies"
+    ]
   },
   {
     "category": "Breakfast",
     "name": "Blueberry Baked Oatmeal with Greek Yogurt",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Slice-of-blueberry-baked-oatmeal-lifted-on-spatula-juicy-berries-visible-pan-below-600x600.jpg"
+    "url": "https://theplantbasedschool.com/blueberry-baked-oatmeal-greek-yogurt/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Slice-of-blueberry-baked-oatmeal-lifted-on-spatula-juicy-berries-visible-pan-below-600x600.jpg",
+    "ingredients": [
+      "2 ripe bananas",
+      "1\u00bd cups rolled oats",
+      "2 cups blueberries fresh or frozen",
+      "1 cup Greek yogurt",
+      "\u00bd cup milk",
+      "\u00bc cup honey",
+      "1 large egg",
+      "\u00bc cup walnuts chopped",
+      "1 teaspoon baking powder",
+      "1 teaspoon cinnamon",
+      "1 teaspoon vanilla extract",
+      "1 pinch salt optional"
+    ]
   },
   {
     "category": "Breakfast",
     "name": "Strawberry Overnight Oats with Greek Yogurt",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Bowl-of-strawberry-overnight-oats-on-marble-table-near-bright-morning-light-600x600.jpg"
+    "url": "https://theplantbasedschool.com/strawberry-overnight-oats-with-greek-yogurt/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Bowl-of-strawberry-overnight-oats-on-marble-table-near-bright-morning-light-600x600.jpg",
+    "ingredients": [
+      "\u00bd pound fresh strawberries hulled, plus more for topping",
+      "1 cup Greek yogurt full-fat or low-fat",
+      "\u00bc cup milk dairy or unsweetened non-dairy",
+      "2 tablespoons maple syrup or honey",
+      "1 teaspoon vanilla extract",
+      "1 cup rolled oats old-fashioned oats, not quick oats"
+    ]
   },
   {
     "category": "30-minute meals",
     "name": "Easy Chickpea Noodle Soup",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Cozy-bowl-of-chickpea-noodle-soup-served-hot-with-olive-oil-and-grated-Parmesan-600x600.jpg"
+    "url": "https://theplantbasedschool.com/chickpea-noodle-soup/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Cozy-bowl-of-chickpea-noodle-soup-served-hot-with-olive-oil-and-grated-Parmesan-600x600.jpg",
+    "ingredients": [
+      "2 tablespoons olive oil extra virgin",
+      "1 medium onion chopped",
+      "2 large carrots sliced into discs",
+      "1 rib celery chopped",
+      "2 cloves garlic grated",
+      "1 bay leaf",
+      "\u00bd teaspoon dried rosemary",
+      "1 can chickpeas rinsed &#8211; 15 oz / 400 g can or 1\u00bd cups / 230 g cooked chickpeas",
+      "8 cups vegetable broth reduced-sodium",
+      "8 ounces pasta pick your favorite noodles",
+      "\u00be teaspoon salt or more to taste",
+      "\u00bc teaspoon black pepper",
+      "4 tablespoons grated parmesan or parsley &#8211; optional to serve"
+    ]
   },
   {
     "category": "Soups",
     "name": "Easy Lentil Soup With Smashed Walnuts",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Warm-lentil-soup-served-in-a-rustic-bowl-with-walnut-gremolata-lemo-herbs-and-a-golden-spoon-600x600.jpg"
+    "url": "https://theplantbasedschool.com/easy-lentil-soup-with-walnut-gremolata/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Warm-lentil-soup-served-in-a-rustic-bowl-with-walnut-gremolata-lemo-herbs-and-a-golden-spoon-600x600.jpg",
+    "ingredients": [
+      "2 tablespoons olive oil extra virgin",
+      "1 onion chopped",
+      "1 large carrots sliced into discs",
+      "1 rib celery chopped",
+      "2 cloves garlic grated",
+      "1 teaspoon paprika smoked or sweet",
+      "1 teaspoon cumin ground",
+      "\u00bc teaspoon cinammon optional",
+      "1 cup dried brown lentils sub 3 cups cooked lentils, or 2 cans lentils (15 oz / 400 g each can), rinsed",
+      "6 cups vegetable broth or chicken broth (reduced-sodium)",
+      "\u00be teaspoon salt or more to taste",
+      "\u215b teaspoon black pepper",
+      "4 ounces spinach or more to taste",
+      "\u2153 cup walnuts roughly chopped",
+      "4 tablespoons fresh parsley or cilantro"
+    ]
   },
   {
     "category": "One-pot Meals",
     "name": "Easy Mediterranean Pinto Bean Soup",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Ladle-lifting-pinto-bean-soup-with-beans-vegetables-and-broth-600x600.jpg"
+    "url": "https://theplantbasedschool.com/mediterranean-pinto-bean-soup/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Ladle-lifting-pinto-bean-soup-with-beans-vegetables-and-broth-600x600.jpg",
+    "ingredients": [
+      "2 tablespoons olive oil extra virgin + more for serving",
+      "2 cups cherry tomatoes sub diced bell pepper or 2 tablespoons tomato paste",
+      "1 onion chopped",
+      "2 carrots sliced into discs",
+      "1 rib celery chopped",
+      "2 cloves garlic grated",
+      "2 teaspoons paprika",
+      "1 teaspoon coriander",
+      "1 teaspoon cumin",
+      "2 cans pinto beans or borlotti beans \u2014 15 oz / 400 g each can",
+      "4 cup vegetable broth or chicken broth \u2014 low-sodium",
+      "\u00bd teaspoon salt or more to taste",
+      "\u00bc teaspoon black pepper",
+      "4 cups spinach",
+      "2 tablespoons lemon juice"
+    ]
   },
   {
     "category": "Curry Recipes",
     "name": "Easy Red Lentil Dal (One-Pot Meal)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Creamy-bowl-of-easy-red-lentil-dal-with-basmati-rice-and-yogurt-on-top-600x600.jpg"
+    "url": "https://theplantbasedschool.com/easy-red-lentil-dal/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Creamy-bowl-of-easy-red-lentil-dal-with-basmati-rice-and-yogurt-on-top-600x600.jpg",
+    "ingredients": [
+      "2 tablespoons olive oil",
+      "1 onion chopped",
+      "2 cloves garlic grated",
+      "1 inch ginger grated",
+      "\u00bc teaspoon red pepper flakes adjust to taste",
+      "2 teaspoons garam masala or Indian-style curry powder",
+      "1 teaspoon coriander ground",
+      "1 teaspoon turmeric ground",
+      "\u00bd teaspoon cumin ground",
+      "2 vine tomatoes grated &#8211; or 1 can (15 oz / 400 g) crushed tomatoes",
+      "3 cups vegetable broth up to 4 cups if needed \u2013 reduced-sodium",
+      "1 cup dried red lentils rinsed",
+      "\u00bd cup half-and-half or unsweetened oat cream",
+      "\u00be teaspoon salt or more to taste + black pepper",
+      "4 packed cups spinach"
+    ]
   },
   {
     "category": "Bread Recipes",
     "name": "Black Pepper Focaccia (Easy No-Knead Recipe)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Stacked-squares-of-black-pepper-focaccia-on-a-marble-surface-by-the-window-600x600.jpg"
+    "url": "https://theplantbasedschool.com/black-pepper-focaccia/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Stacked-squares-of-black-pepper-focaccia-on-a-marble-surface-by-the-window-600x600.jpg",
+    "ingredients": [
+      "1\u00be cups lukewarm water warm to the touch, not hot",
+      "2 teaspoons instant dry yeast",
+      "2 teaspoons sugar",
+      "4 cups all-purpose flour",
+      "4 tablespoons extra virgin olive oil divided &#8211; see below",
+      "3 teaspoons salt fine sea salt preferred",
+      "\u00bc teaspoon black pepper best if freshly cracked",
+      "2 tablespoons extra virgin olive oil",
+      "2 tablespoons water",
+      "\u00bd teaspoon salt",
+      "\u00bc teaspoon black pepper best if freshly cracked &#8211; add more to taste"
+    ]
   },
   {
     "category": "Sides",
     "name": "Batata Harra (Lemony Crispy Roasted Potatoes)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Batata-harra-potatoes-roasted-until-golden-and-crisp-with-garlic-and-chili-oil-600x600.jpg"
+    "url": "https://theplantbasedschool.com/batata-harra-lemony-crispy-roasted-potatoes/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Batata-harra-potatoes-roasted-until-golden-and-crisp-with-garlic-and-chili-oil-600x600.jpg",
+    "ingredients": [
+      "2 pounds potatoes peeled and cut into \u00be-inch (2 cm) cubes",
+      "4 tablespoons olive oil extra virgin",
+      "2 cloves garlic finely minced",
+      "\u00bc teaspoon red pepper flakes or Aleppo pepper (pul biber)",
+      "1 teaspoon paprika sweet or smoked",
+      "1 teaspoon salt plus more for boiling water",
+      "\u00bc teaspoon black pepper freshly ground",
+      "\u00bd lemon juiced",
+      "\u00bc cup fresh cilantro or parsley &#8211; chopped"
+    ]
   },
   {
     "category": "Dips and Spreads",
     "name": "Greek Yogurt Spinach Artichoke Dip (Lightened-Up & No-Mayo)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/11/Picture-of-creamy-spinach-artichoke-dip-with-cracker-dipped-showing-rich-texture-600x600.jpg"
+    "url": "https://theplantbasedschool.com/greek-yogurt-spinach-artichoke-dip/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/11/Picture-of-creamy-spinach-artichoke-dip-with-cracker-dipped-showing-rich-texture-600x600.jpg",
+    "ingredients": [
+      "1 can artichoke hearts (14 ounces can \u2014 8.5 ounces drained), drained and chopped",
+      "1 cup frozen spinach thawed, squeezed dry, and chopped \u2014 measured after thawing and sqeezing",
+      "1 cup Greek yogurt",
+      "1 cup ricotta cheese sub blended cottage cheese or a light cream cheese",
+      "\u00be cup grated parmesan cheese sub crumbled feta",
+      "1 clove garlic grated",
+      "\u00bd teaspoon salt or more to taste + black pepper",
+      "\u00bc teaspoon red pepper flakes optional"
+    ]
   },
   {
     "category": "30-minute meals",
     "name": "Quick Broccoli Fritters (No-Fuss Healthy Meal)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/11/Tasty-broccoli-fritters-on-a-white-plate-with-a-squeeze-of-lemon-for-healthy-dinner-600x600.jpg"
+    "url": "https://theplantbasedschool.com/broccoli-fritters/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/11/Tasty-broccoli-fritters-on-a-white-plate-with-a-squeeze-of-lemon-for-healthy-dinner-600x600.jpg",
+    "ingredients": [
+      "1 medium head broccoli florets and stems, chopped, about 3\u00bd cups. If using frozen broccoli, thaw it in the microwave, drain well, and squeeze out excess water before chopping and mixing \u2014 no need to pre-cook.",
+      "1 cup frozen peas",
+      "2 egg",
+      "\u00bd red onion chopped",
+      "1 clove garlic grated",
+      "\u2153 cup grated parmesan cheese up to \u00bd cup \u2014 or use crumbled feta for a tangy twist",
+      "\u00be cup all-purpose flour",
+      "1 teaspoon dried oregano or Italian seasoning",
+      "\u00bd teaspoon salt + black pepper to taste",
+      "1 &#8211; 2 tablespoons olive oil for cooking"
+    ]
   },
   {
     "category": "30-minute meals",
     "name": "Easy Pasta and Peas (6 Ingredients, One-Pot)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Pasta-and-peas-served-warm-in-a-simple-bowl-with-olive-oil-and-Parmesan-600x600.jpg"
+    "url": "https://theplantbasedschool.com/pasta-and-peas/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Pasta-and-peas-served-warm-in-a-simple-bowl-with-olive-oil-and-Parmesan-600x600.jpg",
+    "ingredients": [
+      "4 tablespoons olive oil extra virgin",
+      "1 medium onion finely chopped",
+      "1 pound frozen peas no need to thaw",
+      "2 cups vegetable broth plus more water or broth as needed",
+      "8 ounces short pasta ditalini, small shells, orzo, fusilli, conchiglie, etc.",
+      "\u00be teaspoon salt plus more to taste",
+      "\u00bc teaspoon black pepper freshly ground",
+      "\u00bd cup grated parmesan best if Parmigiano Reggiano, Grana Padano, or Pecorino Romano &#8211; add more to taste"
+    ]
   },
   {
     "category": "30-minute meals",
     "name": "Easy Mushroom Gnocchi Skillet",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Mushroom-gnocchi-skillet-on-a-rustic-table-with-a-wooden-spoon-warm-creamy-and-inviting-600x600.jpg"
+    "url": "https://theplantbasedschool.com/mushroom-gnocchi-skillet/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Mushroom-gnocchi-skillet-on-a-rustic-table-with-a-wooden-spoon-warm-creamy-and-inviting-600x600.jpg",
+    "ingredients": [
+      "2 tablespoons olive oil extra virgin",
+      "16 ounces mushrooms sliced &#8211; white, brown, or baby bella",
+      "10 ounces cherry tomatoes about 2 cups &#8211; halved",
+      "1 can butter beans 15 oz / 400 g can &#8211; rinsed",
+      "2 cloves garlic grated",
+      "1 teaspoon dried oregano",
+      "\u00bc teaspoon red pepper flakes optional",
+      "1 pound uncooked gnocchi refrigerated or shelf-stable",
+      "1\u00bd cups vegetable broth or more if needed",
+      "\u00bd teaspoon salt or more to taste + black pepper",
+      "\u00bc to \u00bd cup parmesan grated",
+      "2 tablespoons fresh parsley optional &#8211; chopped"
+    ]
   },
   {
     "category": "30-minute meals",
     "name": "Broccoli Orzo with White Beans, Lemon and Parmesan",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Skillet-with-creamy-lemony-broccoli-orzo-with-white-beans-and-black-pepper-600x600.jpg"
+    "url": "https://theplantbasedschool.com/broccoli-orzo/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Skillet-with-creamy-lemony-broccoli-orzo-with-white-beans-and-black-pepper-600x600.jpg",
+    "ingredients": [
+      "1 large head broccoli (about 1\u00bd lb / 600 g) &#8211; cut into small florets",
+      "2 tablespoons extra virgin olive oil + 1 tablespoon to roast the broccoli",
+      "2 cloves garlic grated &#8211; use 1 clove or less if sensitive to garlic",
+      "\u00bc teaspoon red pepper flakes more or less to taste",
+      "1 cup orzo pasta uncooked",
+      "3 cups vegetable broth or chicken broth &#8211; add more as needed",
+      "1 can white beans 15 oz / 400 g can &#8211; butter beans or cannellini &#8211; drained and rinsed",
+      "\u00bd lemon zest and juice",
+      "\u00bd cup grated parmesan",
+      "\u00bd teaspoon salt or more to taste + black pepper"
+    ]
   },
   {
     "category": "30-minute meals",
     "name": "Mediterranean One-Pot Vegetable Orzo (Easy in 30 Minutes)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/12/Mediterranean-one-pot-vegetable-orzo-served-in-a-bowl-600x600.jpg"
+    "url": "https://theplantbasedschool.com/one-pot-vegetable-orzo/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/12/Mediterranean-one-pot-vegetable-orzo-served-in-a-bowl-600x600.jpg",
+    "ingredients": [
+      "2 tablespoons extra virgin olive oil",
+      "1 large leek sliced into half moons",
+      "2 carrots",
+      "2 cups Brussels sprouts halved or quartered if large",
+      "3 cloves garlic grated/minced",
+      "1 teaspoon dried oregano",
+      "1 cup orzo pasta",
+      "1 can black eyed peas 15 oz / 400 g can, rinsed and drained, or 1\u00bd cups / 230 g cooked beans (sub any bean variety)",
+      "4 cups vegetable broth best if low-sodium",
+      "3 cups baby spinach",
+      "\u00bd teaspoon salt or more to taste + black pepper",
+      "\u00bd lemon zest and juice",
+      "\u00bd cup crumbled feta substitute grated parmesan"
+    ]
   },
   {
     "category": "Salads",
     "name": "Quinoa Tabbouleh with Chickpeas",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Large-serving-bowl-of-quinoa-tabbouleh-with-chickpeas-on-rustic-wooden-table-600x600.jpg"
+    "url": "https://theplantbasedschool.com/quinoa-tabbouleh-with-chickpeas/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Large-serving-bowl-of-quinoa-tabbouleh-with-chickpeas-on-rustic-wooden-table-600x600.jpg",
+    "ingredients": [
+      "1\u00bd cups cooked quinoa or 1/2 cup (90g) dry quinoa cooked in 3/4 cup (160ml) water",
+      "1 can chickpeas 15 oz / 400 g can or 1\u00bd cup / 230 g cooked chickpeas",
+      "3 cups flat-leaf parsley measured before chopping",
+      "\u00bc cup fresh mint measured before chopping",
+      "2 ripe vine tomatoes diced",
+      "4 green onions finely chopped",
+      "4 tablespoons olive oil extra virgin",
+      "3 tablespoons lemon juice",
+      "1 teaspoon salt or more to taste + black pepper to taste"
+    ]
   },
   {
     "category": "30-minute meals",
     "name": "Chickpea Avocado Salad (Creamy with Greek Yogurt)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Creamy-chickpea-avocado-salad-served-in-a-bowl-as-a-dip-for-a-night-with-friends-600x600.jpg"
+    "url": "https://theplantbasedschool.com/chickpea-avocado-salad/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Creamy-chickpea-avocado-salad-served-in-a-bowl-as-a-dip-for-a-night-with-friends-600x600.jpg",
+    "ingredients": [
+      "1 can chickpeas drained &#8211; 15 oz / 400 g can or 1\u00bd cups / 230 g cooked chickpeas",
+      "1 ripe avocado",
+      "\u00bd cup pickles finely chopped, dill or regular",
+      "1 rib celery finely chopped",
+      "1 green onion chopped",
+      "\u00bd cup radishes optional &#8211; thinly sliced",
+      "2 tablespoons fresh herbs like parsley, chives, dill, or 1 teaspoon dried",
+      "\u00bd cup Greek yogurt",
+      "1 tablespoon mustard Dijon or yellow",
+      "\u00bc teaspoon salt plus more to taste + black pepper"
+    ]
   },
   {
     "category": "Greek",
     "name": "Greek Quinoa Salad with Chickpeas and Lemon Dressing",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Greek-quinoa-salad-served-family-style-on-a-large-platter-with-fresh-vegetables-and-feta-visible-600x600.jpg"
+    "url": "https://theplantbasedschool.com/greek-quinoa-salad/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Greek-quinoa-salad-served-family-style-on-a-large-platter-with-fresh-vegetables-and-feta-visible-600x600.jpg",
+    "ingredients": [
+      "1\u00bd cups cooked quinoa store-bought pre-cooked or home-cooked",
+      "1 can chickpeas 15 oz / 400 g &#8211; rinsed &#8211; or 1\u00bd cups / 230 g cooked chickpeas",
+      "1 small cucumber diced",
+      "2 cups cherry tomatoes halved",
+      "\u00bd green bell pepper diced",
+      "\u00bd red onion finely diced",
+      "\u00bd cup olives pitted, halved if large",
+      "\u00bd cup feta cheese crumbled, preferably in brine",
+      "4 tablespoons olive oil extra virgin",
+      "3 tablespoons lemon juice or red wine vinegar",
+      "1 teaspoon lemon zest optional but nice",
+      "1 tablespoon mustard yellow or Dijon",
+      "1 tablespoon honey or maple syrup",
+      "1\u00bd teaspoons dried oregano",
+      "\u00bd teaspoon salt start light, feta is salty"
+    ]
   },
   {
     "category": "Salads",
     "name": "Mediterranean Bulgur Salad with Chickpeas",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/A-vibrant-Mediterranean-bulgur-salad-with-chickpeas-fresh-herbs-and-diced-vegetables-served-in-a-bowl-on-a-marble-table-600x600.jpg"
+    "url": "https://theplantbasedschool.com/bulgur-salad/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/A-vibrant-Mediterranean-bulgur-salad-with-chickpeas-fresh-herbs-and-diced-vegetables-served-in-a-bowl-on-a-marble-table-600x600.jpg",
+    "ingredients": [
+      "1 cup bulgur coarse #3 or medium #2 grind",
+      "1 can chickpeas 15 oz / 400 g can \u2013 drained and rinsed or 1\u00bd cup / 230 g cooked chickpeas",
+      "1 small cucumber diced",
+      "\u00bd red bell pepper diced",
+      "\u00bd red onion or shallot &#8211; diced",
+      "\u00bd cup olives pitted and halved if large",
+      "\u2153 cup parsley chopped",
+      "\u00bd cup feta cheese optional but nice",
+      "4 tablespoons olive oil extra virgin",
+      "3 tablespoons lemon juice or vinegar (any)",
+      "1 teaspoon lemon zest optional",
+      "1 teaspoon dried oregano",
+      "\u00bd teaspoon ground cumin optional &#8211; substitute sumac or za&#39;atar or skip it",
+      "\u00bd teaspoon salt + black pepper to taste"
+    ]
   },
   {
     "category": "Sheet Pan",
     "name": "Easy Tofu Rice Bowl with Peanut Sauce",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Easy-Tofu-Rice-Bowl-with-Peanut-Sauce-served-in-a-bowl-colorful-comforting-and-filling-600x600.jpg"
+    "url": "https://theplantbasedschool.com/easy-tofu-rice-bowl-with-peanut-sauce/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Easy-Tofu-Rice-Bowl-with-Peanut-Sauce-served-in-a-bowl-colorful-comforting-and-filling-600x600.jpg",
+    "ingredients": [
+      "15 ounces firm tofu or extra firm",
+      "2 medium carrots sliced into thin rounds",
+      "1 large onion sliced",
+      "3 tablespoons olive oil",
+      "2 tablespoons soy sauce reduced-sodium",
+      "2 teaspoons paprika sweet or smoked",
+      "1\u00bd teaspoons garlic powder",
+      "3 cups broccoli florets fresh or frozen",
+      "\u00bd cup peanut butter creamy",
+      "3 tablespoons soy sauce reduced-sodium",
+      "3 tablespoons lime juice or lemon juice or vinegar",
+      "2 tablespoons maple syrup or honey",
+      "2 cups cooked rice jasmine, basmati or brown",
+      "1 chopped scallion or crushed peanuts &#8211; you can add diced mango or pineapple for freshness (optional)"
+    ]
   },
   {
     "category": "30-minute meals",
     "name": "Chickpea Shakshuka (Easy One-Pan Recipe)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Chickpea-shakshuka-ready-in-a-skillet-topped-with-crumbled-feta-oregano-parsley-and-olives-600x600.jpg"
+    "url": "https://theplantbasedschool.com/chickpea-shakshuka/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Chickpea-shakshuka-ready-in-a-skillet-topped-with-crumbled-feta-oregano-parsley-and-olives-600x600.jpg",
+    "ingredients": [
+      "2 tablespoons olive oil extra virgin",
+      "1 onion chopped",
+      "1 small red bell pepper diced",
+      "1 tablespoon tomato paste",
+      "1 to 2 cloves garlic grated",
+      "2 teaspoons paprika sweet or smoked",
+      "\u00bd teaspoon cumin or more to taste",
+      "\u00bd teaspoon coriander sub cinnamon or all spice",
+      "\u00bc teaspoon red pepper flakes adjust to taste",
+      "2 cans chickpeas 15 oz / 400 g each can &#8211; rinsed",
+      "1 can crushed tomatoes 5 oz / 400 g can",
+      "\u00be cup vegetable broth or water",
+      "\u00be teaspoon salt or more to taste + black pepper",
+      "1 handful fresh parsley and a pinch of dried oregano",
+      "1 cup Greek yogurt or a handful of crumbled feta or both"
+    ]
   },
   {
     "category": "Sheet Pan",
     "name": "Easy Chickpea Shawarma Bowl with Roasted Vegetables",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Finished-chickpea-shawarma-bowl-on-the-table-with-Greek-yogurt-lemon-and-herbs-ready-to-eat-600x600.jpg"
+    "url": "https://theplantbasedschool.com/chickpea-shawarma-bowl/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Finished-chickpea-shawarma-bowl-on-the-table-with-Greek-yogurt-lemon-and-herbs-ready-to-eat-600x600.jpg",
+    "ingredients": [
+      "1 can chickpeas (15 oz / 400 g can) rinsed and drained",
+      "1 medium eggplant diced",
+      "1 medium sweet potato peeled and diced",
+      "1 onion sliced",
+      "\u00bd lemon",
+      "\u2153 cup parsley chopped",
+      "1\u00bd cups cooked quinoa or more to taste",
+      "\u00bc cup crumbled feta + Greek yogurt to serve",
+      "4 tablespoons olive oil extra virgin",
+      "1 clove garlic optional &#8211; grated",
+      "3 teaspoons paprika smoked or sweet",
+      "2 teaspoons coriander ground",
+      "1 teaspoon cumin ground",
+      "\u00bd teaspoon cinnamon",
+      "1 teaspoon salt + black pepper to taste"
+    ]
   },
   {
     "category": "Salads",
     "name": "Roasted Broccoli Salad with Butter Beans and Lemon Dressing",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Roasted-broccoli-salad-with-butter-beans-and-feta-served-family-style-on-a-simple-table-600x600.jpg"
+    "url": "https://theplantbasedschool.com/roasted-broccoli-salad/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Roasted-broccoli-salad-with-butter-beans-and-feta-served-family-style-on-a-simple-table-600x600.jpg",
+    "ingredients": [
+      "1\u00bd pounds broccoli florets about 2 large heads + 1\u20132 tablespoons extra virgin olive oil for roasting",
+      "1 can butter beans 15 oz / 400 g can &#8211; rinsed",
+      "\u00bc cup red onion chopped and soaked in cold water for 5 minutes.",
+      "\u00bd cup sun-dried tomatoes chopped &#8211; use oil-packed, well drained",
+      "\u00bc cup parsley chopped",
+      "\u00bc cup toasted almonds roughly chopped",
+      "\u00bc cup feta cheese crumbled &#8211; add more to taste",
+      "4 tablespoons extra virgin olive oil",
+      "3 tablespoons lemon juice",
+      "1 tablespoon mustard dijon or yellow",
+      "1 tablespoon honey optional",
+      "1 small clove garlic grated",
+      "\u00bd teaspoon salt + black pepper to taste"
+    ]
   },
   {
     "category": "30-minute meals",
     "name": "Vegetable Biryani (Easy 30-Minute, One-Pan Recipe)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Fragrant-vegetable-biryani-in-natural-light-showing-separate-grains-and-vibrant-vegetables-600x600.jpg"
+    "url": "https://theplantbasedschool.com/vegetable-biryani/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Fragrant-vegetable-biryani-in-natural-light-showing-separate-grains-and-vibrant-vegetables-600x600.jpg",
+    "ingredients": [
+      "3 cups cooked basmati rice or 1 cup uncooked basmati rice cooked and drained",
+      "2 tablespoons olive oil",
+      "1 large onion thinly sliced",
+      "2 cloves garlic grated",
+      "1 inch ginger grated",
+      "1 teaspoon garam masala or biryani masala or curry powder",
+      "\u00bc teaspoon red pepper flakes or more to taste",
+      "\u00bd teaspoon turmeric",
+      "\u00bd teaspoon cinnamon",
+      "1\u00bd teaspoons dried mint",
+      "1 bay leaf",
+      "\u00bd cup plain yogurt",
+      "1 can chickpeas 15 oz / 400 g can &#8211; drained and rinsed or 1\u00bd cups / 230 g cooked chickpeas",
+      "1\u00bd cup frozen peas",
+      "2 medium carrots sliced into half-moons"
+    ]
   },
   {
     "category": "Greek",
     "name": "Greek Bean Salad with Lemon Marinated Beans",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Colorful-Greek-Bean-Salad-close-up-bright-vegetables-and-feta-ready-to-eat-600x600.jpg"
+    "url": "https://theplantbasedschool.com/greek-bean-salad/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Colorful-Greek-Bean-Salad-close-up-bright-vegetables-and-feta-ready-to-eat-600x600.jpg",
+    "ingredients": [
+      "4 tablespoons extra virgin olive oil",
+      "3 tablespoons lemon juice or more to taste",
+      "1 teaspoon lemon zest",
+      "1 tablespoon mustard Dijon or yellow",
+      "1 teaspoon honey or maple syrup",
+      "1\u00bd teaspoon dried oregano",
+      "\u00bd teaspoon salt start light and adjust after mixing (feta is salty)",
+      "\u215b teaspoon black pepper",
+      "1 can butter beans or cannellini beans &#8211; 15 oz / 400 g can &#8211; drained and rinsed or 1\u00bd cup / 230 g cooked beans",
+      "1 small cucumber",
+      "2 cups cherry tomatoes halved",
+      "\u00bd green bell pepper finely diced",
+      "\u00bd red onion thinly sliced",
+      "\u00bd cup olives pitted &#8211; halved if large",
+      "\u00be cup feta cheese crumbled (best in brine)"
+    ]
   },
   {
     "category": "Salads",
     "name": "Lucky Black Eyed Pea Salad with Zesty Lemon Dressing",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/12/Black-eyed-pea-salad-recipe-with-Mediterranean-ingredients-fresh-colorful-and-healthy-600x600.jpg"
+    "url": "https://theplantbasedschool.com/black-eyed-pea-salad/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/12/Black-eyed-pea-salad-recipe-with-Mediterranean-ingredients-fresh-colorful-and-healthy-600x600.jpg",
+    "ingredients": [
+      "1 can black-eyed peas rinsed &#8211; 15 oz / 400 g can or 1\u00bd cups / 230 g cooked beans",
+      "1 medium bell pepper finely chopped",
+      "\u00bd red onion finely diced",
+      "2 medium vine-tomatoes chopped and seeded if you like",
+      "1 small cucumber diced",
+      "\u00bd cup corn canned drained or frozen",
+      "\u00bc cup fresh parsley finely chopped",
+      "4 tablespoons extra virgin olive oil",
+      "2 tablespoons lemon juice or any vinegar",
+      "1 tablespoon mustard yellow or Dijon",
+      "1 tablespoon honey or maple syrup",
+      "1 teaspoon dried oregano",
+      "1 teaspoon salt or more to taste + black pepper"
+    ]
   },
   {
     "category": "30-minute meals",
     "name": "Mediterranean Chopped Lentil Salad with Lemon Dressing",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/12/Mediterranean-chopped-lentil-salad-healthy-colorful-and-perfect-for-everyday-Mediterranean-style-eating-600x600.jpg"
+    "url": "https://theplantbasedschool.com/chopped-lentil-salad-lemon-dressing/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/12/Mediterranean-chopped-lentil-salad-healthy-colorful-and-perfect-for-everyday-Mediterranean-style-eating-600x600.jpg",
+    "ingredients": [
+      "1 can lentils rinsed \u2014 15 oz / 400 g can or 1\u00bd cup/230 g cooked lentils \u2014 brown, green, or black",
+      "2 medium vine tomatoes diced small \u2014 about 0.5 lb or 225 g",
+      "2 packed cups flat-leaf parsley finely chopped",
+      "\u00bd packed cup dill finely chopped &#8211; sub mint or more parsley",
+      "4 green onions finely chopped",
+      "3 tablespoons extra virgin olive oil",
+      "2 tablespoons lemon juice",
+      "\u00bd teaspoon lemon zest",
+      "1 tablespoon mustard Dijon or yellow",
+      "1 teaspoon honey or maple syrup",
+      "1 teaspoon dried oregano",
+      "\u00bd teaspoon salt + black pepper to taste"
+    ]
   },
   {
     "category": "Sauces and Dressings",
     "name": "Easy Mushroom Sauce (Without Cream)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/11/Feature-image-of-mushroom-sauce-topping-a-spoonful-of-mashed-potatoes-600x600.jpg"
+    "url": "https://theplantbasedschool.com/mushroom-sauce/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/11/Feature-image-of-mushroom-sauce-topping-a-spoonful-of-mashed-potatoes-600x600.jpg",
+    "ingredients": [
+      "2 tablespoons extra virgin olive oil",
+      "1 pound mushrooms thinly sliced",
+      "\u00bd teaspoon salt + black pepper",
+      "2 cloves garlic grated",
+      "2 tablespoons butter or non-dairy butter",
+      "4 tablespoons all-purpose flour",
+      "2 cups broth vegetable, chicken, or mushroom broth \u2014 best if reduced sodium",
+      "1 tablespoon soy sauce reduced-sodium"
+    ]
   },
   {
     "category": "Pasta",
     "name": "Easy Lentil Bolognese (30-Minute with Canned Lentils)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/08/Healthy-easy-lentil-bolognese-pasta-ready-in-thirty-minutes-600x600.jpg"
+    "url": "https://theplantbasedschool.com/easy-lentil-bolognese/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/08/Healthy-easy-lentil-bolognese-pasta-ready-in-thirty-minutes-600x600.jpg",
+    "ingredients": [
+      "2 tablespoons extra virgin olive oil",
+      "1 onion",
+      "1 rib celery",
+      "1 carrot",
+      "3 cloves garlic",
+      "\u00bd teaspoon dried rosemary",
+      "5 ounces mushrooms any",
+      "3 cups tomato puree sub crushed tomatoes or passata",
+      "1 cup water or vegetable broth",
+      "2 cans lentils 15 ounces each / 2 x 400 g cans",
+      "\u00bd teaspoon salt and black pepper to taste",
+      "2 tablespoons balsamic vinegar or soy sauce"
+    ]
   },
   {
     "category": "Soups",
     "name": "Peach Gazpacho",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/07/Peach-gazpacho-in-a-bowl-with-spoon-fresh-peaches-and-basil-in-the-background-600x600.jpg"
+    "url": "https://theplantbasedschool.com/peach-gazpacho/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/07/Peach-gazpacho-in-a-bowl-with-spoon-fresh-peaches-and-basil-in-the-background-600x600.jpg",
+    "ingredients": [
+      "1 pound ripe tomatoes cored and chopped",
+      "1 pound peaches or nectarines &#8211; pitted and chopped + 1 more for garnishing",
+      "1\u00bd cups English cucumber peeled and chopped",
+      "1 small clove garlic optional",
+      "\u00bd red bell pepper chopped",
+      "1 small onion best if mild &#8211; sub shallot",
+      "2 tablespoons red wine vinegar or any other vinegar",
+      "\u00bd teaspoon salt and black pepper to taste",
+      "2 tablespoons extra virgin olive oil up to \u00bd cup depending on how rich and creamy you want it",
+      "a few fresh basil leaves for garnish",
+      "4 tablespoons crumbled feta optional for garnish"
+    ]
   },
   {
     "category": "Sides",
     "name": "Eggplant Caponata (Healthier)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/07/Authentic-Sicilian-caponata-recipe-styled-in-a-skillet-with-a-spoon-perfect-as-a-Mediterranean-side-or-plant-based-appetizer-600x600.jpg"
+    "url": "https://theplantbasedschool.com/caponata/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/07/Authentic-Sicilian-caponata-recipe-styled-in-a-skillet-with-a-spoon-perfect-as-a-Mediterranean-side-or-plant-based-appetizer-600x600.jpg",
+    "ingredients": [
+      "3 medium eggplants (about 3\u00bc lbs / 1.5 kg), cut into dice",
+      "1 rib celery (about 2\u00bd oz / 70 g), trimmed and peeled",
+      "1 large yellow onion (about 5 oz / 150 g), thinly sliced",
+      "3 tablespoons tomato paste (double concentrate if you can find it)",
+      "2 tablespoons extra virgin olive oil plus more for roasting eggplant",
+      "2 tablespoons white wine vinegar plus a splash for blanching celery",
+      "1 tablespoon capers",
+      "1 tablespoon sugar",
+      "1 tablespoon raisins",
+      "3 tablespoons green olives pitted and roughly chopped",
+      "1 tablespoon pine nuts sub almonds",
+      "1 handful basil leaves",
+      "\u00be teaspoon salt or more to taste"
+    ]
   },
   {
     "category": "Tofu Recipes",
     "name": "Tofu Mushroom Soup (Fiber-Rich & High-Protein)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/09/Comforting-tofu-mushroom-soup-served-hot-with-tofu-shiitake-mushrooms-and-green-vegetables-600x600.jpg"
+    "url": "https://theplantbasedschool.com/tofu-mushroom-soup/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/09/Comforting-tofu-mushroom-soup-served-hot-with-tofu-shiitake-mushrooms-and-green-vegetables-600x600.jpg",
+    "ingredients": [
+      "16 ounces firm tofu",
+      "2 tablespoons olive oil",
+      "3 cloves garlic",
+      "1\u00bd inches ginger grated",
+      "\u00bd teaspoon red pepper flakes more or less to taste",
+      "\u00be cup dried mushrooms shiitake or porcini are best",
+      "1 pound mushrooms fresh or frozen &#8211; white, brown, or mixed &#8211; sliced",
+      "3 tablespoons soy sauce reduced-sodium",
+      "6 cups vegetable broth",
+      "1 cup broccoli florets",
+      "1 cup frozen peas",
+      "2 tablespoons miso paste optional",
+      "\u00bd teaspoon salt + black pepper to taste"
+    ]
   },
   {
     "category": "Tofu Recipes",
     "name": "Tofu Egg Salad",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/06/Tofu-egg-salad-600x600.jpg"
+    "url": "https://theplantbasedschool.com/tofu-egg-salad/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/06/Tofu-egg-salad-600x600.jpg",
+    "ingredients": [
+      "\u2153 cup vegan mayo",
+      "\u00bc cup celery finely chopped",
+      "2 tablespoons dill finely chopped",
+      "2 tablespoons chives finely chopped",
+      "1 tablespoon apple cider vinegar",
+      "\u00bd tablespoon mustard Dijon or yellow",
+      "1 small clove garlic grated",
+      "1 teaspoon salt or more to taste",
+      "2 twists black pepper freshly ground",
+      "\u00bd teaspoon turmeric powder",
+      "\u00bc teaspoon black salt or kala namak is optional. Recommended to get that eggy taste",
+      "8 ounces tofu firm or extra firm"
+    ]
   },
   {
     "category": "Tofu Recipes",
     "name": "Tofu Meatballs",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/06/Tofu-meatballs-600x600.jpg"
+    "url": "https://theplantbasedschool.com/tofu-meatballs/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/06/Tofu-meatballs-600x600.jpg",
+    "ingredients": [
+      "8 ounces firm tofu or extra-firm.",
+      "\u00bd cup breadcrumbs",
+      "\u2153 cup pitted olives black or green.",
+      "\u2153 cup walnuts",
+      "\u00bd onion",
+      "2 cloves garlic",
+      "1 teaspoon dried oregano",
+      "1 handful fresh parsley",
+      "\u00be teaspoon salt",
+      "2 twists black pepper",
+      "1 tablespoon cornstarch optional, to help binding.",
+      "2 tablespoons nutritional yeast optional, for flavor.",
+      "12 ounces spaghetti cooked in salted boiling water.",
+      "our homemade marinara sauce or a store-bought one."
+    ]
   },
   {
     "category": "30-minute meals",
     "name": "Asian Noodle Salad",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2024/06/Asian-noodle-salad-8-1-600x600.jpg"
+    "url": "https://theplantbasedschool.com/asian-noodle-salad/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2024/06/Asian-noodle-salad-8-1-600x600.jpg",
+    "ingredients": [
+      "4\u00bd ounces vermicelli rice noodles + hot water to soak them",
+      "1 cucumber thinly sliced",
+      "1 carrot thinly sliced",
+      "\u215b green cabbage thinly sliced",
+      "1 green onion thinly sliced",
+      "\u00bc cup cilantro or fresh coriander, coarsely chopped",
+      "1 cup bean sprouts optional",
+      "4 tablespoons peanuts toasted and chopped",
+      "\u00bc cup reduced-sodium soy sauce",
+      "\u00bc cup fresh lime juice",
+      "3 tablespoons maple syrup",
+      "2 tablespoons sesame oil",
+      "1 clove garlic grated",
+      "2 red chilis thinly sliced &#8211; more or less to taste",
+      "1 teaspoon sesame seeds optional"
+    ]
   },
   {
     "category": "Breakfast",
     "name": "Strawberry Chia Pudding with Greek Yogurt",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Creamy-strawberry-chia-pudding-in-sunlight-with-spoon-600x600.jpg"
+    "url": "https://theplantbasedschool.com/strawberry-chia-pudding-with-greek-yogurt/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/02/Creamy-strawberry-chia-pudding-in-sunlight-with-spoon-600x600.jpg",
+    "ingredients": [
+      "4 tablespoons chia seeds",
+      "\u00bd pound strawberries + more for topping",
+      "1 cup Greek yogurt",
+      "\u00bd cup milk any",
+      "3 tablespoons maple syrup more or less to taste &#8211; sub honey",
+      "1 teaspoon vanilla extract or lemon zest"
+    ]
   },
   {
     "category": "Breakfast",
     "name": "Banana Overnight Oats with Greek Yogurt (High-Protein)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Banana-overnight-oats-served-simply-in-a-bowl-with-spoon-and-soft-morning-light-600x600.jpg"
+    "url": "https://theplantbasedschool.com/banana-overnight-oats-with-greek-yogurt/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Banana-overnight-oats-served-simply-in-a-bowl-with-spoon-and-soft-morning-light-600x600.jpg",
+    "ingredients": [
+      "1 cup rolled oats",
+      "1 large ripe banana mashed",
+      "1 cup Greek yogurt",
+      "1 cup milk any kind",
+      "2 teaspoons honey or maple syrup",
+      "1 teaspoon cinnamon"
+    ]
   },
   {
     "category": "Desserts",
     "name": "Banana Chocolate Muffins (Soft, Moist, and Easy)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Banana-chocolate-muffins-arranged-on-a-marble-table-showing-tender-crumb-600x600.jpg"
+    "url": "https://theplantbasedschool.com/banana-chocolate-muffins/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2026/01/Banana-chocolate-muffins-arranged-on-a-marble-table-showing-tender-crumb-600x600.jpg",
+    "ingredients": [
+      "3 large ripe bananas very ripe with brown spots, or 4 if small",
+      "1 cup all-purpose flour",
+      "\u00bd cup unsweetened cocoa powder",
+      "\u2154 cup dark chocolate a bar chopped into chunks &#8211; or dark chocolate chips &#8211; about 4 ounces",
+      "\u00bc cup olive oil or a neutral vegetable oil",
+      "\u00be cup sugar brown or white &#8211; or reduce to \u00bd cup for less sweetness",
+      "1 large egg",
+      "1 tablespoon vanilla extract",
+      "3 teaspoons baking powder",
+      "1 teaspoon baking soda",
+      "1 pinch salt"
+    ]
   },
   {
     "category": "Desserts",
     "name": "3-Ingredient Coconut Macaroons (20-Minute, Nonna's Recipe)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/12/Feature-image-of-coconut-macaroons-easy-3-ingredient-holiday-cookies-600x600.jpg"
+    "url": "https://theplantbasedschool.com/3-ingredient-coconut-macaroons/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/12/Feature-image-of-coconut-macaroons-easy-3-ingredient-holiday-cookies-600x600.jpg",
+    "ingredients": [
+      "1 cup unsweetened shredded coconut",
+      "\u00bd cup granulated sugar",
+      "1 large egg white (1.4 ounces / 40 grams)"
+    ]
   },
   {
     "category": "Breakfast",
     "name": "Sweet Potato Chocolate Bread (With Greek Yogurt, No Seed Oils)",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/11/Sliced-sweet-potato-bread-with-dark-chocolate-chunks-showing-moist-texture-and-warm-golden-crumb-600x600.jpg"
+    "url": "https://theplantbasedschool.com/sweet-potato-chocolate-bread/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/11/Sliced-sweet-potato-bread-with-dark-chocolate-chunks-showing-moist-texture-and-warm-golden-crumb-600x600.jpg",
+    "ingredients": [
+      "2 cups cooked sweet potato flesh 12 oz / 340 g \u2014 measured after microwaving 3 medium sweet potatoes",
+      "\u00be cups sugar",
+      "\u00bd cup Greek yogurt full-fat or 2%",
+      "\u2153 cup milk any \u2014 dairy or non-dairy",
+      "\u00bc cup olive oil or avocado oil",
+      "1 large egg",
+      "1 teaspoon vanilla extract",
+      "2 teaspoons cinnamon",
+      "1 teaspoon ground ginger",
+      "\u00bc teaspoon ground clove",
+      "\u00bc teaspoon allspice",
+      "2 cups all purpose flour",
+      "2 teaspoons baking powder",
+      "1 teaspoon baking soda",
+      "\u00be cup chopped dark chocolate bar or chocolate chips"
+    ]
   },
   {
     "category": "Breakfast",
     "name": "Chocolate Chip Zucchini Bread",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/06/Chocolate-chip-zucchini-bread-2-1-600x600.jpg"
+    "url": "https://theplantbasedschool.com/vegan-zucchini-bread/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/06/Chocolate-chip-zucchini-bread-2-1-600x600.jpg",
+    "ingredients": [
+      "\u2153 cup milk any",
+      "\u00bc cup canola oil or sunflower oil",
+      "\u00bd cup sugar",
+      "2 teaspoons vanilla extract",
+      "1\u00bd cup (7 oz) zucchini grated",
+      "1\u00bd cups all-purpose flour",
+      "\u00bc teaspoon salt",
+      "1 teaspoon baking powder",
+      "\u00bd teaspoon baking soda",
+      "1 teaspoon cinnamon",
+      "\u2153 cup dark chocolate chips",
+      "\u00bd cup crushed walnuts"
+    ]
   },
   {
     "category": "Starters",
     "name": "Bruschetta",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/05/Bruschetta-1-600x600.jpg"
+    "url": "https://theplantbasedschool.com/bruschetta/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2025/05/Bruschetta-1-600x600.jpg",
+    "ingredients": [
+      "10 slices crusty bread or baguette cut into \u00bd inch or 1.2 cm thick slices.",
+      "1 pound tomatoes any variety as long as they are ripe",
+      "3 tablespoons extra virgin olive oil",
+      "2 tablespoons balsamic vinegar",
+      "2 cloves garlic 1 for mixture, 1 for rubbing on bread",
+      "15 leaves fresh basil",
+      "1 teaspoon salt",
+      "\u00bc teaspoon pepper"
+    ]
   },
   {
     "category": "Bread Recipes",
     "name": "Air Fryer Croutons",
-    "image": "https://theplantbasedschool.com/wp-content/uploads/2022/06/Air-fryer-croutons-2-1-600x600.jpg"
+    "url": "https://theplantbasedschool.com/air-fryer-croutons/",
+    "image": "https://theplantbasedschool.com/wp-content/uploads/2022/06/Air-fryer-croutons-2-1-600x600.jpg",
+    "ingredients": [
+      "3 cups (\u00bd pound) bread",
+      "1 -2 tablespoon extra virgin olive oil",
+      "\u00bc teaspoon salt (or more to taste)",
+      "2 twists black pepper",
+      "\u00bd teaspoon dried herbs (rosemary, Italian seasoning, or other)",
+      "\u00bc teaspoon spices (garlic powder, red pepper flakes, or other)"
+    ]
   }
 ]

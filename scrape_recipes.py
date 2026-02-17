@@ -63,6 +63,57 @@ class RecipeParser(HTMLParser):
         if tag in ['h2', 'h3']:
             self.in_recipe_title = False
 
+def extract_ingredients_from_recipe_page(url):
+    """Extract ingredients from individual recipe page."""
+    try:
+        result = subprocess.run(
+            ['curl', '-s', '-L', url],
+            capture_output=True,
+            text=True,
+            timeout=10
+        )
+        if result.returncode != 0:
+            return []
+        
+        html = result.stdout
+        
+        # Look for ingredients list - usually in ul or ol with specific class
+        ingredients = []
+        
+        # Try to find ingredient list items
+        # Common patterns: <li class="wprm-recipe-ingredient">
+        ingredient_pattern = r'<li[^>]*class="[^"]*wprm-recipe-ingredient[^"]*"[^>]*>(.*?)</li>'
+        matches = re.findall(ingredient_pattern, html, re.DOTALL | re.IGNORECASE)
+        
+        for match in matches:
+            # Remove HTML tags and clean up
+            ingredient = re.sub(r'<[^>]+>', ' ', match)
+            ingredient = re.sub(r'\s+', ' ', ingredient).strip()
+            # Clean up HTML entities
+            ingredient = ingredient.replace('&#x25a2;', '').replace('&#32;', ' ')
+            ingredient = re.sub(r'\s+', ' ', ingredient).strip()
+            if ingredient:
+                ingredients.append(ingredient)
+        
+        # Fallback: try other common ingredient patterns
+        if not ingredients:
+            ingredient_pattern = r'<li[^>]*class="[^"]*ingredient[^"]*"[^>]*>(.*?)</li>'
+            matches = re.findall(ingredient_pattern, html, re.DOTALL | re.IGNORECASE)
+            for match in matches:
+                ingredient = re.sub(r'<[^>]+>', ' ', match)
+                ingredient = re.sub(r'\s+', ' ', ingredient).strip()
+                # Clean up HTML entities
+                ingredient = ingredient.replace('&#x25a2;', '').replace('&#32;', ' ')
+                ingredient = re.sub(r'\s+', ' ', ingredient).strip()
+                if ingredient:
+                    ingredients.append(ingredient)
+        
+        return ingredients[:15]  # Limit to 15 ingredients to keep card readable
+        
+    except Exception as e:
+        print(f"Error fetching ingredients from {url}: {e}")
+        return []
+
 def extract_recipes_from_html(html_content):
     """Extract recipes from HTML using regex for a more robust approach."""
     recipes = []
@@ -85,13 +136,15 @@ def extract_recipes_from_html(html_content):
             recipe['category'] = 'Recipe'
         
         # Extract title from h3 with post-summary__title class
-        title_match = re.search(r'<h3[^>]*class="[^"]*post-summary__title[^"]*"[^>]*>.*?<a[^>]*>(.*?)</a>', article, re.DOTALL)
+        title_match = re.search(r'<h3[^>]*class="[^"]*post-summary__title[^"]*"[^>]*>.*?<a[^>]*href="([^"]+)"[^>]*>(.*?)</a>', article, re.DOTALL)
         
         if title_match:
-            title = re.sub(r'<[^>]+>', '', title_match.group(1)).strip()
+            url = title_match.group(1)
+            title = re.sub(r'<[^>]+>', '', title_match.group(2)).strip()
             # Clean up HTML entities
             title = title.replace('&amp;', '&').replace('&#8217;', "'")
             recipe['name'] = title
+            recipe['url'] = url
         
         # Extract image URL - look for data-lazy-srcset first (better quality)
         img_match = re.search(r'data-lazy-srcset="([^"]+)"', article)
@@ -141,20 +194,38 @@ def main():
         parser.feed(html_content)
         recipes = parser.recipes
     
-    print(f"\nFound {len(recipes)} recipes:")
-    for i, recipe in enumerate(recipes[:10], 1):
-        print(f"{i}. {recipe['name']}")
-        print(f"   Category: {recipe.get('category', 'N/A')}")
-        print(f"   Image: {recipe['image'][:80]}...")
+    print(f"\nFound {len(recipes)} recipes. Fetching ingredients...")
     
-    if len(recipes) > 10:
-        print(f"... and {len(recipes) - 10} more")
+    # Fetch ingredients for each recipe
+    for i, recipe in enumerate(recipes, 1):
+        print(f"[{i}/{len(recipes)}] Fetching ingredients for: {recipe['name'][:50]}...")
+        if 'url' in recipe:
+            ingredients = extract_ingredients_from_recipe_page(recipe['url'])
+            recipe['ingredients'] = ingredients
+            if ingredients:
+                print(f"   ✓ Found {len(ingredients)} ingredients")
+            else:
+                print(f"   ✗ No ingredients found")
+        else:
+            recipe['ingredients'] = []
+    
+    print(f"\n{'='*70}")
+    print(f"Summary: {len(recipes)} recipes processed")
+    for i, recipe in enumerate(recipes[:5], 1):
+        print(f"\n{i}. {recipe['name']}")
+        print(f"   Category: {recipe.get('category', 'N/A')}")
+        print(f"   Ingredients: {len(recipe.get('ingredients', []))} items")
+        if recipe.get('ingredients'):
+            print(f"   First 3: {', '.join(recipe['ingredients'][:3])}")
+    
+    if len(recipes) > 5:
+        print(f"\n... and {len(recipes) - 5} more")
     
     # Save to JSON for easy integration
     with open('recipes.json', 'w') as f:
         json.dump(recipes, f, indent=2)
     
-    print(f"\nRecipes saved to recipes.json")
+    print(f"\n✓ Recipes saved to recipes.json")
     
     # Generate JavaScript array
     js_recipes = "const recipes = " + json.dumps(recipes, indent=12) + ";"
