@@ -13,6 +13,15 @@ A Tinder-style recipe swiper that lets you quickly choose which recipes you want
 ## How to Use
 
 1. **Open the file:**
+
+   **Option A: Quick preview server**
+   ```bash
+   cd ~/Projects/recipe-swiper
+   ./serve.sh
+   # Then visit http://localhost:8080
+   ```
+
+   **Option B: Direct file open**
    ```bash
    # Navigate to the project
    cd ~/Projects/recipe-swiper
