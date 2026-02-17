@@ -2,6 +2,8 @@
 
 A Tinder-style recipe swiper that lets you quickly choose which recipes you want to cook by swiping right (like) or left (nope).
 
+Now featuring **44 real recipes** from [The Plant Based School](https://theplantbasedschool.com/recipes/)!
+
 ## Features
 
 - 📱 **Touch-friendly** - Swipe with your finger on mobile or drag with mouse on desktop
@@ -9,6 +11,7 @@ A Tinder-style recipe swiper that lets you quickly choose which recipes you want
 - 🎨 **Beautiful UI** - Modern gradient design with smooth animations
 - 📋 **Results page** - See all your liked recipes at the end
 - 🔄 **Start over** - Easily restart and try again
+- 🍽️ **44 Real Recipes** - All from The Plant Based School website
 
 ## How to Use
 
@@ -45,7 +48,21 @@ A Tinder-style recipe swiper that lets you quickly choose which recipes you want
 
 ## Customization
 
-### Adding More Recipes
+### Updating Recipes from The Plant Based School
+
+To refresh the recipe list from the website:
+
+```bash
+python3 scrape_recipes.py
+```
+
+This will:
+1. Download the latest recipes page
+2. Extract recipe names, images, and categories
+3. Save to `recipes.json` and `recipes.js`
+4. Copy the array from `recipes.js` into `index.html`
+
+### Adding More Recipes Manually
 
 Edit the `recipes` array in `index.html` (around line 262):
 
@@ -60,14 +77,14 @@ const recipes = [
 ];
 ```
 
-### Using Real Recipe Data
+### Using Recipe Data from Other Sources
 
-To fetch recipes from The Plant-Based School (or any website):
+To fetch recipes from other websites:
 
-1. **Option A: Manual scraping**
-   - Visit the recipe pages
-   - Copy image URLs and names
-   - Add to the `recipes` array
+1. **Option A: Modify the scraper**
+   - Edit `scrape_recipes.py`
+   - Update the URL and HTML parsing logic
+   - Run the script to generate new `recipes.js`
 
 2. **Option B: API/Backend (advanced)**
    - Create a simple backend (Node.js/Python) to scrape the website
@@ -82,9 +99,10 @@ To fetch recipes from The Plant-Based School (or any website):
          });
      ```
 
-3. **Option C: Browser extension**
-   - Create a bookmarklet that extracts recipes from the source page
-   - Copy the JSON output into the recipes array
+3. **Option C: Manual scraping**
+   - Visit the recipe pages
+   - Copy image URLs and names
+   - Add to the `recipes` array
 
 ### Changing Colors
 
@@ -115,8 +133,12 @@ Change `#667eea` and `#764ba2` to your preferred colors.
 
 ```
 recipe-swiper/
-├── index.html        # Complete app (HTML + CSS + JS)
-└── README.md         # This file
+├── index.html           # Complete app (HTML + CSS + JS)
+├── scrape_recipes.py    # Recipe scraper for The Plant Based School
+├── recipes.json         # Extracted recipes in JSON format
+├── recipes.js           # Extracted recipes as JavaScript array
+├── serve.sh            # Quick preview server script
+└── README.md           # This file
 ```
 
 ## Ideas for Enhancement
@@ -132,8 +154,8 @@ recipe-swiper/
 
 ## Credits
 
-- Sample recipe images from [Unsplash](https://unsplash.com)
-- Inspired by [The Plant-Based School](https://theplantbasedschool.com/recipes/)
+- All recipes and images from [The Plant Based School](https://theplantbasedschool.com/recipes/)
+- Swipe UI design inspired by Tinder
 
 ## License
 
