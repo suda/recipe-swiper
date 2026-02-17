@@ -780,7 +780,7 @@
             currentCard.classList.add(`swiped-${direction}`);
             
             if (direction === 'right') {
-                selectedRecipes.push(recipes[currentIndex]);
+                selectedRecipes.push(filteredRecipes[currentIndex]);
             }
 
             setTimeout(() => {
