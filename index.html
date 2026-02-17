@@ -282,7 +282,6 @@
             max-width: 600px;
             width: 100%;
             flex: 1;
-            max-height: calc(100vh - 40px);
             overflow-y: auto;
             flex-direction: column;
         }
@@ -296,12 +295,15 @@
             color: #333;
             margin-bottom: 25px;
             font-size: 1.8rem;
+            flex-shrink: 0;
         }
 
         .category-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
             gap: 12px;
+            flex: 1;
+            align-content: start;
         }
 
         .category-button {
